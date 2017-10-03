@@ -19,15 +19,6 @@ export class TodoComponent {
   constructor(private todoDataService: TodoDataService) {
   }
 
-  addTodo() {
-    if (this.newTodo.title.length == 0) {
-      return;
-    }
-
-    this.todoDataService.addTodo(this.newTodo);
-    this.newTodo = new Todo();
-  }
-
   toggleTodoComplete(todo) {
     this.todoDataService.toggleTodoComplete(todo);
   }
