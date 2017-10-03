@@ -1,0 +1,17 @@
+<section class="todoapp">
+  <header class="header">
+    <h1>Todos</h1>
+    <input class="new-todo" placeholder="What needs to be done?" autofocus="" [(ngModel)]="newTodo.title" (keyup.enter)="addTodo()">
+  </header>
+  <section class="main" *ngIf="todos.length > 0">
+    <ul class="todo-list">
+      <ng-template ngFor let-item [ngForOf]="todos">
+        <todo-item [todo]="item"></todo-item>
+      </ng-template>
+    </ul>
+  </section>
+  <router-outlet></router-outlet>
+  <footer class="footer" *ngIf="todos.length > 0">
+    <span class="todo-count"><strong>{{todos.length}}</strong> {{todos.length == 1 ? 'item' : 'items'}} left</span>
+  </footer>
+</section>
