@@ -7,8 +7,7 @@ import {TodoDataService} from '../todo-data.service';
 
 @Component({
   selector: 'todo-list',
-  templateUrl: './todo-list.component.html',
-  providers: [TodoDataService]
+  templateUrl: './todo-list.component.html'
 })
 export class TodoListComponent {
 
@@ -21,7 +20,6 @@ export class TodoListComponent {
     if (this.newTodo.title.length == 0) {
       return;
     }
-
     this.todoDataService.addTodo(this.newTodo);
     this.newTodo = new Todo();
   }
