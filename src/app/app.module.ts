@@ -9,6 +9,8 @@ import { TodoComponent} from './todo-item/todo-item.component';
 import { AboutusComponent} from './aboutus/aboutus.component';
 import { GuideComponent} from './guide/guide.component';
 import { routing } from './app.routes';
+import { TodoDetailComponent } from './todo-detail/todo-detail.component';
+import { TodoDataService } from "./todo-data.service";
 
 @NgModule({
   declarations: [
@@ -16,7 +18,8 @@ import { routing } from './app.routes';
     TodoComponent,
     TodoListComponent,
     GuideComponent,
-    AboutusComponent
+    AboutusComponent,
+    TodoDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +27,7 @@ import { routing } from './app.routes';
     HttpModule,
     routing
   ],
-  providers: [],
+  providers: [ TodoDataService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

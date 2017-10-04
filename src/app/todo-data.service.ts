@@ -48,7 +48,7 @@ export class TodoDataService {
   // Simulate GET /todos/:id
   getTodoById(id: number): Todo {
     return this.todos
-      .filter(todo => todo.id === id)
+      .filter(todo => todo.id == id)
       .pop();
   }
 
