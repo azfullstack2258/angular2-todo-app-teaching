@@ -23,7 +23,6 @@ export class TodoComponent {
   }
 
   removeTodo(todo) {
-    alert()
     this.todoDataService.deleteTodoById(todo.id);
   }
 
