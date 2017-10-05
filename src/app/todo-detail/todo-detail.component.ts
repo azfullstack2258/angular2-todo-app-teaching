@@ -19,8 +19,7 @@ export class TodoDetailComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    let todoId = this._activatedRoute.snapshot.paramMap.get('todo_id');
-    this.todo = this._todoDataService.getTodoById(parseInt(todoId));
+    this.todo = this._activatedRoute.snapshot.data['todo'];
   }
 
 }

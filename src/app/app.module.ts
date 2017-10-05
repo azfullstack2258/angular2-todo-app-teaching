@@ -11,6 +11,7 @@ import { GuideComponent} from './guide/guide.component';
 import { routing } from './app.routes';
 import { TodoDetailComponent } from './todo-detail/todo-detail.component';
 import { TodoDataService } from "./todo-data.service";
+import { TodoItemResolver } from './resolvers/todo-item.resolver';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,10 @@ import { TodoDataService } from "./todo-data.service";
     HttpModule,
     routing
   ],
-  providers: [ TodoDataService ],
+  providers: [
+    TodoDataService,
+    TodoItemResolver
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
