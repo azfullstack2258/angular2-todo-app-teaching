@@ -1,8 +1,8 @@
 <section class="todoapp">
-  <header class="header">
+  <!--header class="header">
     <h1>Todos</h1>
     <input class="new-todo" placeholder="What needs to be done?" autofocus="" [(ngModel)]="newTodo.title" (keyup.enter)="addTodo()">
-  </header>
+  </header-->
   <section class="main" *ngIf="todos.length > 0">
     <ul class="todo-list">
       <ng-template ngFor let-item [ngForOf]="todos">
