@@ -1,4 +1,7 @@
 import {Injectable} from '@angular/core';
+import {Http, Response} from '@angular/http';
+import {Observable} from 'rxjs';
+
 import {Todo} from './todo';
 
 @Injectable()
@@ -11,7 +14,10 @@ export class TodoDataService {
   // Placeholder for todo's
   todos: Todo[] = [];
 
-  constructor() {
+  constructor(
+    private _http:Http
+  ) {
+
   }
 
   // Simulate POST /todos
@@ -43,6 +49,20 @@ export class TodoDataService {
   // Simulate GET /todos
   getAllTodos(): Todo[] {
     return this.todos;
+  }
+
+  getAllTodosRemote(): Observable<any>{
+
+    let obse =  this._http.get(`/api/all.json`);
+    return obse;
+
+  }
+
+  getTodoByIdRemote(id: number): Observable<any>{
+
+    let obse =  this._http.get(`/api/${id}.json`);
+    return obse;
+
   }
 
   // Simulate GET /todos/:id

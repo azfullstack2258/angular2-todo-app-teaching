@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
 
 import { TodoDataService } from '../todo-data.service';
 import {Todo} from '../todo';
@@ -10,7 +11,8 @@ import {Todo} from '../todo';
   styleUrls: ['./todo-detail.component.css']
 })
 export class TodoDetailComponent implements OnInit {
-  todo: Todo;
+  title: string;
+  id: number;
 
   constructor(
     private _router: Router,
@@ -19,7 +21,12 @@ export class TodoDetailComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.todo = this._activatedRoute.snapshot.data['todo'];
+    let observerID = this._activatedRoute.snapshot.data['todo'];
+    let obse = this._todoDataService.getTodoByIdRemote(observerID);
+    obse.subscribe( response => {
+      this.title = response.json().title
+      this.id = response.json().id
+    })
   }
 
 }

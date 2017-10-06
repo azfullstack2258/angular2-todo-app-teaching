@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Wake up"
+  },
+  {
+    "id": 2,
+    "title": "Have breakfast"
+  },
+  {
+    "id": 3,
+    "title": "Plan a day"
+  },
+  {
+    "id": 4,
+    "title": "Have lunch"
+  },
+  {
+    "id": 5,
+    "title": "Have a nap"
+  },
+  {
+    "id": 6,
+    "title": "Have dinner"
+  }
+]

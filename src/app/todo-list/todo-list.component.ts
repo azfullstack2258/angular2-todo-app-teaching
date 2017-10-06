@@ -12,8 +12,14 @@ import {TodoDataService} from '../todo-data.service';
 export class TodoListComponent {
 
   newTodo: Todo = new Todo();
+  todoArr: Todo[] = [];
 
   constructor(private todoDataService: TodoDataService) {
+  }
+
+  ngOnInit() {
+    this.todoDataService.getAllTodosRemote()
+      .subscribe( response => this.todoArr = response.json() );
   }
 
   addTodo() {
@@ -25,7 +31,8 @@ export class TodoListComponent {
   }
 
   get todos() {
-    return this.todoDataService.getAllTodos();
+    //return this.todoDataService.getAllTodos();
+    return this.todoArr;
   }
 
 }
