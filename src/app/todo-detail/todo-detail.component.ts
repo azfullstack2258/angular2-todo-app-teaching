@@ -11,9 +11,7 @@ import {Todo} from '../todo';
   styleUrls: ['./todo-detail.component.css']
 })
 export class TodoDetailComponent implements OnInit {
-  title: string;
-  id: number;
-
+  todo: any = {};
   constructor(
     private _router: Router,
     private _activatedRoute: ActivatedRoute,
@@ -21,12 +19,9 @@ export class TodoDetailComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    let observerID = this._activatedRoute.snapshot.data['todo'];
-    let obse = this._todoDataService.getTodoByIdRemote(observerID);
-    obse.subscribe( response => {
-      this.title = response.json().title
-      this.id = response.json().id
-    })
+    this.todo = this._activatedRoute.snapshot.data['todo'];
+    console.log("\n\nResolver code:\n\nresolve(route: ActivatedRouteSnapshot)\n{\n\tlet todoId = route.params['todo_id'];\n\treturn this._todoDataService.getTodoByIdRemote(todoId)\n\t\t\t.map(response => response.json());\n}");
+    console.log("\nDetail component code:\n\n ngOnInit() {\n\tthis.todo = this._activatedRoute.snapshot.data['todo'];\n}");
   }
 
 }
