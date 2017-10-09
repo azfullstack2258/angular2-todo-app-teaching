@@ -4,6 +4,7 @@
 import { Resolve, ActivatedRouteSnapshot } from '@angular/router';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import 'rxjs/Rx';
 
 import { TodoDataService } from '../todo-data.service';
 
@@ -15,6 +16,7 @@ export class TodoItemResolver implements Resolve<any> {
   ){}
   resolve(route: ActivatedRouteSnapshot) {
     let todoId = route.params['todo_id'];
-    return todoId;
+    return this._todoDataService.getTodoByIdRemote(todoId)
+              .map(response => response.json());
   }
 }
