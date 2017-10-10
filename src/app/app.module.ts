@@ -12,6 +12,8 @@ import { routing } from './app.routes';
 import { TodoDetailComponent } from './todo-detail/todo-detail.component';
 import { TodoDataService } from "./todo-data.service";
 import { TodoItemResolver } from './resolvers/todo-item.resolver';
+import { SepWordPipe } from './pipes/sep-word.pipe';
+import { MakeFirstUpperPipe } from './pipes/make-first-upper.pipe';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { TodoItemResolver } from './resolvers/todo-item.resolver';
     TodoListComponent,
     GuideComponent,
     AboutusComponent,
-    TodoDetailComponent
+    TodoDetailComponent,
+    SepWordPipe,
+    MakeFirstUpperPipe
   ],
   imports: [
     BrowserModule,
