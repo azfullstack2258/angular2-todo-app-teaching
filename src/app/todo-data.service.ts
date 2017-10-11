@@ -53,14 +53,14 @@ export class TodoDataService {
 
   getAllTodosRemote(): Observable<any>{
 
-    let obse =  this._http.get(`/api/all.json`);
+    let obse =  this._http.get(`http://localhost:3000/api/todos/all`);
     return obse;
 
   }
 
   getTodoByIdRemote(id: number): Observable<any>{
 
-    let obse =  this._http.get(`/api/${id}.json`);
+    let obse =  this._http.get(`http://localhost:3000/api/todos/${id}`);
     return obse;
 
   }
