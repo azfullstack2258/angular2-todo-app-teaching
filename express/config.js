@@ -18,11 +18,11 @@ module.exports = {
     },
     {
       "id": 5,
-      "title": "Meeting with designer"
+      "title": "Meeting with designer upon his call"
     },
     {
       "id": 6,
-      "title": "Check dev progress"
+      "title": "Check dev progress of front-end guys, Alex & Danny"
     }
   ]
 }
