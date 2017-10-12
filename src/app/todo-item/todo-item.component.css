@@ -1,6 +1,24 @@
 a.showDetail {
   font-size: 12px;
   padding-top: 18px;
-  position: absolute;
+  width: 20px;
+  margin-left: 10px;
   right: 45px;
+}
+
+button.addBtn {
+  border: solid 1px;
+  height: 26px;
+  font-size: 14px;
+  background-color: #787e7e;
+  color: white;
+}
+
+button.addBtn:hover {
+  background-color: white;
+  color: black;
+}
+
+input.comment {
+  height: 20px;
 }
