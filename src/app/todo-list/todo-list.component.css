@@ -1,0 +1,12 @@
+section.comments {
+  background-color: white;
+}
+
+section.comments h2 {
+  padding: 10px 10px 10px 10px;
+}
+
+section.comments ul li {
+  padding: 10px 10px 10px 10px;
+  font-size: 17px;
+}

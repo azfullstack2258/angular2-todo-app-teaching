@@ -6,12 +6,22 @@
   <section class="main" *ngIf="todos.length > 0">
     <ul class="todo-list">
       <ng-template ngFor let-item [ngForOf]="todos">
-        <todo-item [todo]="item"></todo-item>
+        <todo-item [todo]="item" (clicked)="onClickListner($event)"></todo-item>
       </ng-template>
     </ul>
   </section>
+
   <router-outlet></router-outlet>
   <footer class="footer" *ngIf="todos.length > 0">
     <span class="todo-count"><strong>{{todos.length}}</strong> {{todos.length == 1 ? 'item' : 'items'}} left</span>
   </footer>
+</section>
+
+<section class="comments">
+  <h2>Comments</h2>
+  <ul class="todo-list">
+    <ng-template ngFor let-item [ngForOf]="comments">
+      <li><b>{{item.header}}</b>: {{item.content}}</li>
+    </ng-template>
+  </ul>
 </section>

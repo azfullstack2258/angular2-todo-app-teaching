@@ -2,7 +2,9 @@
   <div class="view">
     <input class="toggle" type="checkbox" (click)="toggleTodoComplete(todo)" [checked]="todo.complete">
     <label>{{todo.title}}</label>
-    <a class="showDetail" [routerLink]="['/todo', todo.id]">more detail -></a>
+    <input class="comment" type="text" [(ngModel)]="this.comment" placeholder="type comment here">
+    <button class="addBtn" (click)="addComment()">Add</button>
+    <a class="showDetail" [routerLink]="['/todo', todo.id]">...</a>
     <button class="destroy" (click)="removeTodo(todo)"></button>
   </div>
 </li>
