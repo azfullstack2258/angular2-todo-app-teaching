@@ -1,11 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component'
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { TodoComponent} from './todo-item/todo-item.component';
+import { LoginComponent} from './login/login.component';
 import { AboutusComponent} from './aboutus/aboutus.component';
 import { GuideComponent} from './guide/guide.component';
 import { routing } from './app.routes';
@@ -20,6 +21,7 @@ import { MakeFirstUpperPipe } from './pipes/make-first-upper.pipe';
     AppComponent,
     TodoComponent,
     TodoListComponent,
+    LoginComponent,
     GuideComponent,
     AboutusComponent,
     TodoDetailComponent,
@@ -29,6 +31,7 @@ import { MakeFirstUpperPipe } from './pipes/make-first-upper.pipe';
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpModule,
     routing
   ],
