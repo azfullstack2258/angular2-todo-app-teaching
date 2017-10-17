@@ -1,4 +1,5 @@
 module.exports = {
+  dbString: "mongodb://127.0.0.1:27017/myth",
   todos: [
     {
       "id": 1,
@@ -26,3 +27,4 @@ module.exports = {
     }
   ]
 }
+

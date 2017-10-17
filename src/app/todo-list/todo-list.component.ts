@@ -25,7 +25,7 @@ export class TodoListComponent {
   }
 
   addTodo() {
-    if (this.newTodo.title.length == 0) {
+    if (this.newTodo.content.length == 0) {
       return;
     }
     this.todoDataService.addTodo(this.newTodo);

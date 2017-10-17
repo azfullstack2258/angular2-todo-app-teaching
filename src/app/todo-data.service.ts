@@ -52,8 +52,8 @@ export class TodoDataService {
   }
 
   getAllTodosRemote(): Observable<any>{
-    //let obse =  this._http.get(`http://localhost:3000/api/todos/all`);
-    let obse =  this._http.get(`/api/all.json`);
+    let obse =  this._http.get(`http://localhost:3000/api/todos/`);
+    //let obse =  this._http.get(`/api/all.json`);
     return obse;
 
   }

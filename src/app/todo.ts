@@ -1,6 +1,6 @@
 export class Todo {
   id: number;
-  title: string = '';
+  content: string = '';
   complete: boolean = false;
   created_time: Object;
 

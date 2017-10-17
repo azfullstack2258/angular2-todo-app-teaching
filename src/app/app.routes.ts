@@ -9,7 +9,7 @@ import { TodoDetailComponent } from "./todo-detail/todo-detail.component";
 import { TodoItemResolver } from './resolvers/todo-item.resolver';
 
 const routes: Routes = [
-  { path: '', component: LoginComponent },
+  { path: '', component: TodoListComponent },
 	{ path: 'aboutus', component: AboutusComponent },
   { path: 'todo', component: TodoListComponent },
   { path: 'todo/:todo_id',
